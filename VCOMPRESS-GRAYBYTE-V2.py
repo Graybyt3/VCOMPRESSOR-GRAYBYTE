@@ -234,7 +234,7 @@ def process_video(file):
 def main():
     video_files = [f for f in input_dir.iterdir() if f.suffix.lower() in VIDEO_EXTENSIONS and f.is_file()]
     to_process = [f for f in video_files if str(f.resolve()) not in processed_files]
-    summary = f"{Fore.RED}$ TOTAL FOUND {len(video_files)} VIDEOS | {len(processed_files)} {Fore.GREEN}ALREADY COMPRESSED {Style.RESET_ALL}| {len(to_process)} REMAINING {Style.RESET_ALL}"
+    summary = f"{Fore.RED}[+] TOTAL FOUND {len(video_files)} VIDEOS | {len(processed_files)} {Fore.GREEN}ALREADY COMPRESSED {Style.RESET_ALL}| {len(to_process)} REMAINING {Style.RESET_ALL}"
     log_and_print(summary)
     log_and_print(f"\n{Fore.YELLOW}{'='*90}{Style.RESET_ALL}")
     success = len(processed_files)
