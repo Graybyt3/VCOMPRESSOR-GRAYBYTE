@@ -12,7 +12,7 @@ init(autoreset=True)
 
 CPU_LIMIT = 400  # Change to 800 (~50%) or 1600 (~100%) for faster encoding
 
-input_dir = Path("/home/graybyte/Downloads/Video/TEST") # Change to machine path
+input_dir = Path("/mnt/exfat/RAW-COMPLETE-PROJECTS BY GRAYBYTE/VCOMPRESSOR-GRAYBYTE/")
 output_dir = input_dir / "COMPRESSED"
 output_dir.mkdir(exist_ok=True)
 
@@ -65,7 +65,7 @@ def process_video(file):
     start_time = time.time()
     cmd = [
         "cpulimit","-l", str(CPU_LIMIT), "--","ffmpeg",
-        "-i", str(file), "-c:v","libx265","-crf","30","-preset","veryslow",
+        "-i", str(file), "-c:v","libx265","-crf","30","-preset","superfast",
         "-c:a","copy","-threads","4","-progress","pipe:1","-nostats", str(out_file)
     ]
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
