@@ -161,7 +161,6 @@ def get_size(file):
     return os.path.getsize(file) / (1024 * 1024)
 
 def clean_filename(name):
-    name = name.replace("xHamster", "").replace("Taboofantazy", "").replace("EPORNER", "").replace("SpankBang", "")
     name = re.sub(r'[_-]+', ' ', name)
     name = re.sub(r'[^a-zA-Z0-9\s]', '', name)
     name = re.sub(r'\s+', ' ', name).strip()
