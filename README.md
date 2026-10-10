@@ -135,5 +135,3 @@ your-video-folder/
 - Already-processed files and existing output files are skipped automatically.
 - The script is designed for **owned / authorized media only**.
 - Requires `cpulimit` – without it the process will fail.
-
-```
